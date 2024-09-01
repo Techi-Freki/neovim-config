@@ -56,3 +56,7 @@ map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 
 -- peek
 map("n", "<leader>md", "<cmd>PeekOpen<CR>", { desc = "Open markdown document in browser" })
+
+-- todo-comments
+-- map("n", "<leader>tn", require("todo-comments").jump_next(), { desc = "Jumps to the next TODO comment" })
+-- map("n", "<leader>tp", require("todo-comments").jump_prev(), { desc = "Jumps to the previous TODO comment" })
