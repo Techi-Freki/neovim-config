@@ -101,5 +101,3 @@
 
 ## Session
 [spectacle](https://github.com/RutaTang/spectacle.nvim)
-
-

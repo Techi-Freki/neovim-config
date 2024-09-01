@@ -1,0 +1,10 @@
+# Techi-Freki Neovim Config
+
+This is my standard Neovim configuration. You should probably not use it. It's taylored exactly for all of my weird programming quirks.
+
+- [Plugins](#plugins)
+
+<a id="plugins"></a>
+## Plugins
+
+This is the order in which I install these plugins. This is as close as an exact accounting that I can muster.
