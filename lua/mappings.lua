@@ -31,3 +31,6 @@ map("n", "<leader>T?", "<cmd>h tabnew<CR>", { desc = "Opens the tab help page" }
 map("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Cycles to the next buffer in the bufferline" })
 map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Cycles to the previous buffer in the bufferline" })
 map("n", "<leader>b", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Closes the current buffer without closing the window" })
+
+-- plugin bindings
+map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggles the file explorer" })
