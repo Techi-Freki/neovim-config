@@ -1,1 +1,1 @@
-require("peek").setup{}
+require("peek").setup{ app = "browser" }

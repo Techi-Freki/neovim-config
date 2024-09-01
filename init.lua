@@ -2,6 +2,10 @@ require("settings")
 require("mappings")
 require("configs.lazy")
 
+--[[ Colorscheme Configs --]]
+
+require("configs.onedark-deep")
+
 --[[ Plugin Configs --]]
 
 require("configs.startup")

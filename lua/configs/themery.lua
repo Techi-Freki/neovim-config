@@ -3,7 +3,7 @@ require("themery").setup({
 		{ name = "Dracula", colorscheme = "dracula" },
 		{ name = "Monokai", colorscheme = "monokai" },
 		{ name = "Tokyo Night", colorscheme = "tokyonight" },
-		{ name = "One Dark (Dark)", colorscheme = "onedark" },
+		{ name = "One Dark (deep)", colorscheme = "onedark" },
 	},
 	livePreview = true,
 	cmd = "Themery",
