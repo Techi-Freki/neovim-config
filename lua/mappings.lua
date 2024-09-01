@@ -32,5 +32,16 @@ map("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Cycles to the next b
 map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Cycles to the previous buffer in the bufferline" })
 map("n", "<leader>b", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Closes the current buffer without closing the window" })
 
--- plugin bindings
+-- [[ Plugin Bindings --]]
+
+-- neo-tree
 map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggles the file explorer" })
+
+-- themery
+map("n", "<leader>cs", "<cmd>Themery<CR>", { desc = "Toggles the theme picker" })
+
+-- toggleterm
+map("n", "<leader>th", "<cmd>ToggleTerm size=24 direction=horizontal<CR>", { desc = "Opens a horizontal terminal" })
+map("n", "<leader>tv", "<cmd>ToggleTerm size=64 direction=vertical<CR>", { desc = "Opens a vertical terminal" })
+map("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<CR>", { desc = "Opens a tab terminal" })
+map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Opens a floating terminal" })
