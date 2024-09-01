@@ -1,6 +1,6 @@
 require("settings")
-require("configs.lazy")
 require("mappings")
+require("configs.lazy")
 
 --[[ Plugin Configs --]]
 

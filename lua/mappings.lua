@@ -45,3 +45,10 @@ map("n", "<leader>th", "<cmd>ToggleTerm size=24 direction=horizontal<CR>", { des
 map("n", "<leader>tv", "<cmd>ToggleTerm size=64 direction=vertical<CR>", { desc = "Opens a vertical terminal" })
 map("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<CR>", { desc = "Opens a tab terminal" })
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Opens a floating terminal" })
+
+-- telescope
+local builtin = require("telescope.builtin")
+map("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+map("n", "<leader>fg", builtin.live_grep, { desc = "File using grep" })
+map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
+map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
