@@ -15,10 +15,8 @@ require("configs.bufferline")
 require("configs.neo-tree")
 require("configs.peek")
 require("configs.todo-comments")
-<<<<<<< HEAD
 require("configs.mini-pairs")
 require("configs.mini-splitjoin")
 require("configs.mini-ai")
 require("configs.mini-hipatterns")
-=======
->>>>>>> plugins/todo-comments
+require("configs.render-markdown")
