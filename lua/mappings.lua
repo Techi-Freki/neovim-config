@@ -58,8 +58,11 @@ map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 map("n", "<leader>md", "<cmd>PeekOpen<CR>", { desc = "Open markdown document in browser" })
 
 -- todo-comments
--- map("n", "<leader>tn", "<cmd>TodoCommentsNext<CR>", { desc = "Jumps to the next TODO comment" })
--- map("n", "<leader>tp", "<cmd>TodoCommentsPrev<CR>", { desc = "Jumps to the previous TODO comment" })
+map("n", "<leader>tn", "<cmd>TodoCommentsNext<CR>", { desc = "Jumps to the next TODO comment" })
+map("n", "<leader>tp", "<cmd>TodoCommentsPrev<CR>", { desc = "Jumps to the previous TODO comment" })
+
+-- follow-md-links
+map("n", "<bs>", ":edit #<CR>", { silent = true })
 
 -- trouble
 -- map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<CR>", desc = { "Diagnostics (Trouble)" })

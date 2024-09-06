@@ -7,8 +7,8 @@
 [lsp-config](https://github.com/neovim/nvim-lspconfig) **DONE**
 
 ### Diagnostics
-- [trouble](https://github.com/folke/trouble.nvim) **DONE**
-- [lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim)
+- [trouble](https://github.com/folke/trouble.nvim) **DONE** except for key bindings
+- [lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim) **DONE**
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) **DONE**
 
 ## Completion
