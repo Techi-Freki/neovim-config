@@ -8,6 +8,7 @@ require("configs.onedark-deep")
 
 --[[ Plugin Configs --]]
 
+require("configs.lsp-config")
 require("configs.startup")
 require("configs.themery")
 require("configs.lualine")
@@ -20,3 +21,4 @@ require("configs.mini-splitjoin")
 require("configs.mini-ai")
 require("configs.mini-hipatterns")
 require("configs.render-markdown")
+require("configs.trouble")

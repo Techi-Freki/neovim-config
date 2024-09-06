@@ -58,5 +58,13 @@ map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 map("n", "<leader>md", "<cmd>PeekOpen<CR>", { desc = "Open markdown document in browser" })
 
 -- todo-comments
--- map("n", "<leader>tn", require("todo-comments").jump_next(), { desc = "Jumps to the next TODO comment" })
--- map("n", "<leader>tp", require("todo-comments").jump_prev(), { desc = "Jumps to the previous TODO comment" })
+-- map("n", "<leader>tn", "<cmd>TodoCommentsNext<CR>", { desc = "Jumps to the next TODO comment" })
+-- map("n", "<leader>tp", "<cmd>TodoCommentsPrev<CR>", { desc = "Jumps to the previous TODO comment" })
+
+-- trouble
+-- map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<CR>", desc = { "Diagnostics (Trouble)" })
+-- map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.fub=0<CR>", desc = { "Buffer diagnostics toggle filter.buf=0<CR>" })
+-- map("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<CR>", desc = { "Symbols (Trouble)" })
+-- map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus-false win.position=right<CR>", desc = { "LSP Definitions / references / ... (Trouble)" })
+-- map("n", "<leader>xL", "<cmd>Trouble loclist toggle<CR>", desc = { "Location List (Trouble)" })
+-- map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<CR>", desc = { "Quickfix list (Trouble)" })

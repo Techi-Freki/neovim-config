@@ -4,7 +4,7 @@
 [lazy](https://github.com/folke/lazy.nvim) **DONE**
 
 ## LSP (Language Server Protocol)
-[lsp-config](https://github.com/neovim/nvim-lspconfig)
+[lsp-config](https://github.com/neovim/nvim-lspconfig) **DONE** but, need to install `markdown_oxide`
 
 ### Diagnostics
 - [trouble](https://github.com/folke/trouble.nvim)
@@ -62,7 +62,7 @@
 [bufferline](https://github.com/akinsho/bufferline.nvim) **DONE**
 
 ## Cursorline
-[nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword)
+[nvim-cursorword](https://github.com/xiyaowong/nvim-cursorword) **DONE**
 
 ## Greeter
 [startup](https://github.com/max397574/startup.nvim) **DONE**
