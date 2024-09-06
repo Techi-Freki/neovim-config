@@ -46,7 +46,7 @@
 - [transparent.nvim](https://github.com/xiyaowong/transparent.nvi)
 - [mini.hipatterns](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md) **DONE**
 - [command-and-cursor.nvim](https://github.com/moyiz/command-and-cursor.nvim)
-- [tiny-devicons-auto-colors.nvim](https://github.com/rachartier/tiny-devicons-auto-colors.nvim)
+- [tiny-devicons-auto-colors.nvim](https://github.com/rachartier/tiny-devicons-auto-colors.nvim) **DONE**
 - [twilight.nvim](https://github.com/folke/twilight.nvim)
 
 ## Colorscheme Switcher
