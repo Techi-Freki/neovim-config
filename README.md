@@ -7,7 +7,7 @@
 [lsp-config](https://github.com/neovim/nvim-lspconfig) **DONE**
 
 ### Diagnostics
-- [trouble](https://github.com/folke/trouble.nvim)
+- [trouble](https://github.com/folke/trouble.nvim) **DONE**
 - [lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) **DONE**
 
@@ -16,7 +16,6 @@
 
 ## Web Development
 [TailwindCSS Colorizer CMP](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim)
-
 [convert.nvim](https://github.com/cjodo/convert.nvim)
 
 ## Markdown
