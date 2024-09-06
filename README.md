@@ -4,7 +4,7 @@
 [lazy](https://github.com/folke/lazy.nvim) **DONE**
 
 ## LSP (Language Server Protocol)
-[lsp-config](https://github.com/neovim/nvim-lspconfig) **DONE** but, need to install `markdown_oxide`
+[lsp-config](https://github.com/neovim/nvim-lspconfig) **DONE**
 
 ### Diagnostics
 - [trouble](https://github.com/folke/trouble.nvim)
