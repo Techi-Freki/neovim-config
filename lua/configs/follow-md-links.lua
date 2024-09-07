@@ -1,1 +1,1 @@
-return { "jghauser/follow-md-links.nvim" }
+require("follow-md-links").setup {}

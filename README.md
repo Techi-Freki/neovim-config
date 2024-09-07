@@ -1,4 +1,5 @@
 # Awesome Neovim (Plugin Reference)
+[awesome-neovim](https://github.com/rockerBOO/awesome-neovim)
 
 ## Plugin Manager
 [lazy](https://github.com/folke/lazy.nvim) **DONE**
@@ -20,7 +21,7 @@
 
 ## Markdown
 - [peek.nvim](https://github.com/toppair/peek.nvim) **DONE**
-- [follow-md-links.nvim](https://github.com/jghauser/follow-md-links.nvim)
+- [follow-md-links.nvim](https://github.com/jghauser/follow-md-links.nvim) **DONE**
 - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) **DONE**
 
 ## Marks
@@ -38,10 +39,10 @@
 - [Neo-tree file Nesting Config](https://github.com/saifulapm/neotree-file-nesting-config) **DONE**
 
 ## Project
-[neoproj](https://github.com/pluffie/neoproj)
+[neoproj](https://github.com/pluffie/neoproj) **DONE**
 
 ## Color
-- [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)
+- [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) **DONE**
 - [transparent.nvim](https://github.com/xiyaowong/transparent.nvi)
 - [mini.hipatterns](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md) **DONE**
 - [command-and-cursor.nvim](https://github.com/moyiz/command-and-cursor.nvim)
@@ -52,7 +53,7 @@
 [themery](https://github.com/zaldih/themery.nvim) **DONE**
 
 ## Bars and Lines
-[barbecue](https://github.com/utilyre/barbecue.nvim)
+[barbecue](https://github.com/utilyre/barbecue.nvim) **DONE**
 
 ## Statusline
 [lualine](https://github.com/nvim-lualine/lualine.nvim) **DONE**
