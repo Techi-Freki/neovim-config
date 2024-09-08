@@ -9,3 +9,4 @@ require("lspconfig").cssls.setup{ capabilities = capabilities }
 
 require("lspconfig").csharp_ls.setup{}
 require("lspconfig").markdown_oxide.setup{}
+require("lspconfig").vuels.setup{}
