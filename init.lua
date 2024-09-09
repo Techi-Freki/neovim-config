@@ -8,7 +8,6 @@ require("configs.onedark-deep")
 
 --[[ Plugin Configs --]]
 
-require("configs.lsp-config")
 require("configs.startup")
 require("configs.themery")
 require("configs.lualine")
@@ -27,3 +26,5 @@ require("configs.tiny-devicons-auto-colors")
 require("configs.barbecue")
 require("configs.lsp-colors")
 require("configs.nvim-colorizer")
+require("configs.lsp-config")
+require("configs.gitsigns")

@@ -49,7 +49,7 @@ map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Opens a 
 
 -- telescope
 local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+map("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<CR>", { desc = "Find files"})
 map("n", "<leader>fg", builtin.live_grep, { desc = "File using grep" })
 map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
 map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })

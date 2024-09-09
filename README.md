@@ -100,3 +100,6 @@
 
 ## Session
 [spectacle](https://github.com/RutaTang/spectacle.nvim)
+
+## Git
+[gitsigns](https://github.com/lewis6991/gitsigns.nvim)
