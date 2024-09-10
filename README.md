@@ -7,6 +7,9 @@
 ## LSP (Language Server Protocol)
 [lsp-config](https://github.com/neovim/nvim-lspconfig) **DONE**
 
+## Completion
+[mini.completion](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-completion.md) **DONE**
+
 ### Diagnostics
 - [trouble](https://github.com/folke/trouble.nvim) **DONE** except for key bindings
 - [lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim) **DONE**
