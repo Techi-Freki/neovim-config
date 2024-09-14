@@ -65,9 +65,48 @@ map("n", "<leader>tp", "<cmd>TodoCommentsPrev<CR>", { desc = "Jumps to the previ
 map("n", "<bs>", ":edit #<CR>", { silent = true })
 
 -- trouble
--- map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<CR>", desc = { "Diagnostics (Trouble)" })
--- map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.fub=0<CR>", desc = { "Buffer diagnostics toggle filter.buf=0<CR>" })
--- map("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<CR>", desc = { "Symbols (Trouble)" })
--- map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus-false win.position=right<CR>", desc = { "LSP Definitions / references / ... (Trouble)" })
--- map("n", "<leader>xL", "<cmd>Trouble loclist toggle<CR>", desc = { "Location List (Trouble)" })
--- map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<CR>", desc = { "Quickfix list (Trouble)" })
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Diagnostics (Trouble)" })
+map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.fub=0<CR>", { desc = "Buffer diagnostics toggle filter.buf=0<CR>" })
+map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<CR>", { desc = "Symbols (Trouble)" })
+map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus-false win.position=right<CR>", { desc = "LSP Definitions / references / ... (Trouble)" })
+map("n", "<leader>xL", "<cmd>Trouble loclist toggle<CR>", { desc = "Location List (Trouble)" })
+map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix list (Trouble)" })
+
+-- url-open
+map("n", "<leader>ou", "<cmd>URLOpenUnderCursor<CR>", { desc = "Opens the url under the cursor" })
+map("n", "<leader>oh", "<cmd>URLOpenHighlightAll<CR>", { desc = "Highlights all url in the current buffer" })
+map("n", "<leader>oc", "<cmd>URLOpenHighlightAllClear<CR>", { desc = "Clears all highlighted urls in the current buffer" })
+
+-- nvim-ufo
+-- map("n", "zR", require("ufo").openAllFolds, { desc = "Opens all folds" })
+-- map("n", "zM", require("ufo").closeAllFolds, { desc = "Closes all folds" })
+-- map("n", "zr", require("ufo").openFoldsExceptKinds, { desc = "Opens folds except kind" })
+-- map("n", "zm", reqquire("ufo").closeFoldsWith, { desc = "Close all folds" })
+-- map("n", "K", function()
+--     local winid = require("ufo").peekFoldedLinesUnderCursor()
+--     if not winid then
+--         vim.lsp.buf.hover()
+--     end
+-- end)
+
+-- tabs-vs-spaces
+map("n", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "Convert spaces to tabs for buffer" })
+map("v", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "Convert spaces to tabs for range" })
+map("n", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "Convert tabs to spaces for buffer" })
+map("v", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "Convert tabs to spaces for range" })
+
+-- harpoon
+-- local harpoon = require("harpoon")
+--
+-- harpoon:setup()
+--
+-- map("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Adds the current buffer to the harpoon list"})
+-- map("n", "<leader>ht", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggles harpoon list" })
+--
+-- map("n", "<leader>hj", function() harpoon:list():select(1) end, { desc = "Selects the first item in the harpoon list" })
+-- map("n", "<leader>hk", function() harpoon:list():select(2) end, { desc = "Selects the second item in the harppon list" })
+-- map("n", "<leader>hl", function() harpoon:list():select(3) end, { desc = "Selects the third item in the harpoon list" })
+-- map("n", "<leader>h;", function() harpoon:list():select(4) end, { desc = "Selects the fourth item in the harpoon list" })
+--
+-- map("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Goes to the next item in the harpoon list" })
+-- map("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Goes to the previous item in the harpoon list" })
