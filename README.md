@@ -743,6 +743,8 @@ Adding visual elements to neovim.
 - [render-markdown](#render-markdown)
 - [nvim-colorizer](#nvim-colorizer)
 - [transparent](#transparent)
+- [startup](#startup)
+- [neoproj](#neoproj)
 
 <a id="lualine"></a>
 #### [`lualine`](https://github.com/nvim-lualine/lualine.nvim)
@@ -1016,4 +1018,53 @@ require("transparent").setup { auto = true }
 ```
 ...
 require("configs.transparent")
+```
+
+<a id="startup"></a>
+A simple startup screen for neovim.
+#### [`startup`](https://github.com/startup-nvim/startup.nvim)
+> *~/.config/nvim/lua/plugins/startup.lua*
+```
+return {
+    "startup-nvim/startup.nvim",
+    dependencies = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
+    },
+}
+```
+
+> *~/.config/nvim/lua/configs/startup.lua*
+```
+require("startup").setup{ theme = "dashboard" }
+```
+
+> */.config/nvim/init.lua*
+```
+...
+require("configs.startup")
+```
+
+<a id="neoproj"></a>
+#### [`neoproj`](https://github.com/pluffie/neoproj)
+Small yet powerful project manager for Neovim written in fennel.
+> *~/.config/nvim/lua/plugins/neoproj.lua*
+```
+return {
+    "pluffie/neoproj",
+    cmd = { "ProjectOpen", "ProjectNew" }
+}
+```
+
+> *~/.config/nvim/lua/configs/neoproj.lua*
+```
+require("neoproj").setup {
+    project_path = "~/Projects",
+}
+```
+
+> *~/.config/nvim/init.lua*
+```
+...
+require("configs.neoproj")
 ```
