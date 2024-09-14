@@ -408,13 +408,13 @@ Here are some plugins to help with various utilitarian tasks.
 - [toggleterm](#toggleterm)
 - [tabs-vs-spaces](#tabs-vs-spaces)
 - [which-key](#which-key)
-- [tidy](#tidy)
 - [harpoon](#harpoon)
 - [neo-tree](#neo-tree)
 - [peek](#peek)
 - [nvim-emmet](#nvim-emmet)
 - [harpoon](#harppon)
 - [neo-tree](#neotree)
+- [tidy](#tidy)
 
 <a id="automkdir"></a>
 #### [`automkdir`](https://github.com/mateuszwieloch/automkdir.nvim)
@@ -701,6 +701,28 @@ map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggles the file expl
 > *~/.config/nvim/init.lua*
 ```
 require("configs.neo-tree")
+```
+
+<a id="tidy"></a>
+#### [`tidy`](https://github.com/mcauley-penney/tidy.nvim)
+Removes trailing whitespace and empty lines at EOF on save.
+> *~/.config/nvim/lua/plugins/tidy.lua*
+```
+return {
+    "mcauley-penney/tidy.nvim",
+    config = true,
+}
+```
+
+> *~/.config/lua/configs/tidy.lua*
+```
+require("tidy").setup { enabel_on_save = true }
+```
+
+> */.config/nvim/init.lua*
+```
+...
+require("configs.tidy")
 ```
 
 ---

@@ -37,6 +37,7 @@
   "tabs-vs-spaces.nvim": { "branch": "main", "commit": "86cfc69bee95647b802ea49fcb816ff0ea798fc7" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "themery.nvim": { "branch": "main", "commit": "834d9bd81ddcaabbcba1cc51827455e9652a9d97" },
+  "tidy.nvim": { "branch": "main", "commit": "58fcc63de53840fa78946e4161e8883e67213f92" },
   "tiny-devicons-auto-colors.nvim": { "branch": "main", "commit": "a39fa4c92268832f6034306793b8acbfec2a7549" },
   "todo-comments.nvim": { "branch": "main", "commit": "319c01b99b7a8c9ac2066bf0efd4d6ec68fef444" },
   "toggleterm.nvim": { "branch": "main", "commit": "48be57eaba817f038d61bbf64d2c597f578c0827" },
