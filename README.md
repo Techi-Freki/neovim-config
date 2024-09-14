@@ -742,9 +742,6 @@ Adding visual elements to neovim.
 - [csvlens](#csvlens)
 - [render-markdown](#render-markdown)
 - [nvim-colorizer](#nvim-colorizer)
-- [transparent](#transparent)
-- [startup](#startup)
-- [neoproj](#neoproj)
 
 <a id="lualine"></a>
 #### [`lualine`](https://github.com/nvim-lualine/lualine.nvim)
