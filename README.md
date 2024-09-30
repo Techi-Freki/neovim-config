@@ -14,6 +14,8 @@ Here is my neovim configuration. This is specifically catered to my tastes as a 
     - [Indentation](#indentation)
     - [Utilities](#utilities)
     - [Decoration](#decoration)
+    - [Git Integration](#git-integration)
+
 
 <a id="directory-structure"></a>
 ## Directory Structure
@@ -415,6 +417,7 @@ Here are some plugins to help with various utilitarian tasks.
 - [harpoon](#harppon)
 - [neo-tree](#neotree)
 - [tidy](#tidy)
+- [vim-loremipsum](#vim-loremipsum)
 
 <a id="automkdir"></a>
 #### [`automkdir`](https://github.com/mateuszwieloch/automkdir.nvim)
@@ -448,7 +451,7 @@ And add the keymappings.
 ```
 ...
 map("n", "<leader>ou", "<cmd>URLOpenUnderCursor<CR>", { desc = "Opens the url under the cursor" })
-map("n", "<leader>oh", "<cmd>URLOpenHighlightAll<CR>", { desc = "Highlights all url in the current buffer" })
+map("n", "<leader>oh", "<cmd>URLOpenHighlightAll<CR>", { desc = "Highlights all urls in the current buffer" })
 map("n", "<leader>oc", "<cmd>URLOpenHighlightAllClear<CR>", { desc = "Clears all highlighted urls in the current buffer" })
 ```
 
@@ -725,6 +728,14 @@ require("tidy").setup { enabel_on_save = true }
 require("configs.tidy")
 ```
 
+<a id="vim-loremipsum"></a>
+#### [`vim-loremipsum`](https://github.com/wolandark/vim-loremipsum)
+A dummy text generator.
+> *~/.config/nvim/lua/plugins/vim-loremipsum.lua*
+```
+return { "wolandark/vim-loremipsum" }
+```
+
 ---
 
 <a id="decoration"></a>
@@ -738,7 +749,6 @@ Adding visual elements to neovim.
 - [tiny-devicons-auto-colors](#tiny-devicons-auto-colors)
 - [todo-comments](#todo-comments)
 - [twilight](#twilight)
-- [gitsigns](#gitsigns)
 - [csvlens](#csvlens)
 - [render-markdown](#render-markdown)
 - [nvim-colorizer](#nvim-colorizer)
@@ -910,23 +920,6 @@ require("twilight").setup {}
 require("configs.twilight")
 ```
 
-<a id="gitsigns"></a>
-#### [`gitsigns`](https://github.com/lewis6991/gitsigns.nvim)
-> *~/.config/nvim/lua/plugins/gitsigns.lua*
-```
-return { "lewis6991/gitsigns.nvim" }
-```
-
-> *~/.configs/nvim/lua/configs/gitsigns.lua*
-```
-require("gitsigns").setup {}
-```
-
-> *~/.config/nvim/init.lua*
-```
-...
-require("configs.gitsigns")
-```
 
 <a id="csvlens"></a>
 #### [`csvlens`](https://github.com/theKnightsOfRohan/csvlens.nvim)
@@ -993,4 +986,29 @@ require("colorizer").setup {}
 ```
 ...
 require("configs.nvim-colorizer")
+```
+
+---
+
+<a id="git-integration"></a>
+### Git Integration
+- [`gitsigns`](#gitsigns)
+
+
+<a id="gitsigns"></a>
+#### [`gitsigns`](https://github.com/lewis6991/gitsigns.nvim)
+> *~/.config/nvim/lua/plugins/gitsigns.lua*
+```
+return { "lewis6991/gitsigns.nvim" }
+```
+
+> *~/.configs/nvim/lua/configs/gitsigns.lua*
+```
+require("gitsigns").setup {}
+```
+
+> *~/.config/nvim/init.lua*
+```
+...
+require("configs.gitsigns")
 ```

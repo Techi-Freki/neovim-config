@@ -9,15 +9,13 @@ opt.relativenumber = true
 
 -- whitespace
 opt.list = true
-opt.listchars = "tab:» ,lead:.,trail:.,eol:↲"
+opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 
 
 -- ↲
 -- ↵
 -- •
+-- ⏎
 
--- wordwrap
-opt.wrap = false
-
--- indentation
-opt.tabstop = 4
+opt.wrap = false --wordwrap false
+opt.tabstop = 4 -- indentation
