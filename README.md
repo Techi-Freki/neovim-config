@@ -176,6 +176,7 @@ Now you need to install the language servers that you will be using. [Here](http
 - [Markdown](#markdown)
 - [Lua](#lua)
 - [Emmet](#emmet)
+- [ftconfig](#ftconfig)
 
 
 <a id="python"></a>
@@ -283,6 +284,19 @@ And add the language server configuration to your init file.
 ...
 require("configs.lsp-config")
 ```
+
+<a id="ftconfig"></a>
+#### ftconfig
+This lets me have different settings for neovim depending on file type.
+```
+!mkdir ~/.config/nvim/ftconfig
+```
+
+> *~/.config/nvim/ftconfig/lua.lua
+```
+
+```
+
 ---
 
 <a id="colorschemes"></a>

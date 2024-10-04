@@ -11,11 +11,6 @@ opt.relativenumber = true
 opt.list = true
 opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 
-
--- ↲
--- ↵
--- •
--- ⏎
-
 opt.wrap = false --wordwrap false
 opt.tabstop = 4 -- indentation
+opt.filetype = on -- ftplugin files
