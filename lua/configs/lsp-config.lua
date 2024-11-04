@@ -31,6 +31,6 @@ require("lspconfig").cssls.setup{ capabilities = capabilities }
 require("lspconfig").emmet_language_server.setup{}
 require("lspconfig").csharp_ls.setup{}
 require("lspconfig").markdown_oxide.setup{}
-require("lspconfig").vuels.setup{
-		commentstring = "//",
-}
+require("lspconfig").vuels.setup(
+		{ opt = { commentstring = "//", } }
+)

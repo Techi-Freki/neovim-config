@@ -14,3 +14,4 @@ opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 opt.wrap = false --wordwrap false
 opt.tabstop = 4 -- indentation
 opt.filetype = on -- ftplugin files
+opt.scrolloff = 999 -- center cursor in large files
