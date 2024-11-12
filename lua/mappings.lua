@@ -76,19 +76,6 @@ map("n", "<leader>ou", "<cmd>URLOpenUnderCursor<CR>", { desc = "Opens the url un
 map("n", "<leader>oh", "<cmd>URLOpenHighlightAll<CR>", { desc = "Highlights all url in the current buffer" })
 map("n", "<leader>oc", "<cmd>URLOpenHighlightAllClear<CR>", { desc = "Clears all highlighted urls in the current buffer" })
 
--- nvim-ufo
--- map("n", "zR", require("ufo").openAllFolds, { desc = "Opens all folds" })
--- map("n", "zM", require("ufo").closeAllFolds, { desc = "Closes all folds" })
--- map("n", "zr", require("ufo").openFoldsExceptKinds, { desc = "Opens folds except kind" })
--- map("n", "zm", reqquire("ufo").closeFoldsWith, { desc = "Close all folds" })
--- map("n", "K", function()
---     local winid = require("ufo").peekFoldedLinesUnderCursor()
---
---     if not winid then
---         vim.lsp.buf.hover()
---     end
--- end)
-
 -- tabs-vs-spaces
 map("n", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "Convert spaces to tabs for buffer" })
 map("v", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "Convert spaces to tabs for range" })
