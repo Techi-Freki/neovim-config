@@ -97,7 +97,6 @@ map("v", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "
 
 -- harpoon
 -- local harpoon = require("harpoon")
---
 -- harpoon:setup()
 --
 -- map("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Adds the current buffer to the harpoon list"})
