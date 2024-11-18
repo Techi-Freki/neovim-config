@@ -21,13 +21,16 @@ Here is my neovim configuration. This is specifically catered to my tastes as a 
 ## Directory Structure
 > *~/.config/nvim*
 ```
+after/
+    ftplugin/
 lua/
     configs/
     plugins/
-    .vimrc
+    filtypes.lua
     mappings.lua
     settings.lua
 init.lua
+.vimrc
 ```
 
 <a id="vimrc"></a>
@@ -35,9 +38,11 @@ init.lua
 Converting tabs to 4 spaces.
 > *~/.config/nvim/.vimrc*
 ```
-set tabstop = 4
-set shiftwidth = 4 smarttab
-set expandtab
+set tabstop=4
+set shiftwidth=4
+set smarttab=true
+set expandtab=true
+set softtabstop=true
 ```
 
 <a id="settings"></a>
@@ -48,14 +53,21 @@ Some basic settings for neovim.
 ```
 local opt = vim.opt
 
+-- colors
 opt.termguicolors = true
+
+-- line numbers
 opt.number = true
 opt.relativenumber = true
 
+-- whitespace
 opt.list = true
-opt.listchars = "tab:» ,lead:.,trail:.,eol:↲"
+opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 
-opt.wrap = false
+opt.wrap = false --wordwrap false
+opt.tabstop = 4 -- indentation
+opt.filetype = on -- ftplugin files
+opt.scrolloff = 999 -- center cursor in large files
 ```
 
 <a id="mappings"></a>
@@ -428,7 +440,6 @@ Here are some plugins to help with various utilitarian tasks.
 - [neo-tree](#neo-tree)
 - [peek](#peek)
 - [nvim-emmet](#nvim-emmet)
-- [harpoon](#harppon)
 - [neo-tree](#neotree)
 - [tidy](#tidy)
 - [vim-loremipsum](#vim-loremipsum)
@@ -599,6 +610,7 @@ return {
 ```
 > *~/.config/nvim/lua/mappings.lua*
 ```
+...
 map("n", "<leader>th", "<cmd>ToggleTerm size=24 direction=horizontal<CR>", { desc = "Opens a horizontal terminal" })
 map("n", "<leader>tv", "<cmd>ToggleTerm size=64 direction=vertical<CR>", { desc = "Opens a vertical terminal" })
 map("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<CR>", { desc = "Opens a tab terminal" })
@@ -607,7 +619,7 @@ map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Opens a 
 
 <a id="tabs-vs-spaces"></a>
 #### [`tabs-vs-spaces`](https://github.com/tenxsoydev/tabs-vs-spaces.nvim)
-Hint and fix deviation indentation.
+Hint and fix deviations in indentation.
 > *~/.config/nvim/lua/plugins/tabs-vs-spaces.lua*
 ```
 return { "tenxsoydev/tabs-vs-spaces.nvim" }
@@ -626,7 +638,8 @@ require("configs.tabs-vs-spaces")
 ```
 
 <a id="harpoon"></a>
-[`harpoon`](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+#### [`harpoon`](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+Quickly "pin" and navigate to buffers.
 > *~/.config/nvim/lua/plugins/harpoon.lua*
 ```
 return {
@@ -637,22 +650,42 @@ return {
 }
 ```
 
-Key mappings
-> *~/.config/nvim/lua/mappings.lua*
+> *~/.config/nvim/lua/configs/harpoon.lua*
 ```
-...
 local harpoon = require("harpoon")
+local map = vim.keymap.set
 
-harpoon:setup()
+harpoon:setup({})
 
-map("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Adds the current buffer to the harpoon list"})
-map("n", "<leader>ht", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggles harpoon list" })
-map("n", "<leader>hj", function() harpoon:list():select(1) end, { desc = "Selects the first item in the harpoon list" })
-map("n", "<leader>hk", function() harpoon:list():select(2) end, { desc = "Selects the second item in the harpoon list" })
-map("n", "<leader>hl", function() harpoon:list():select(3) end, { desc = "Selects the third item in the harpoon list" })
-map("n", "<leader>h;", function() harpoon:list():select(4) end, { desc = "Selects the fourth item in the harpoon list" })
-map("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Goes to the next item in the harpoon list" })
-map("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Goes to the previous item in the harpoon list" })
+local conf = require("telescope.config").values
+local function toggle_telescope(harpoon_files)
+        local file_paths = {}
+        for _, item in ipairs(harpoon_files.items) do
+                table.insert(file_paths, item.value)
+        end
+
+        require("telescope.pickers").new({}, {
+                prompt_title = "Harpoon",
+                finder = require("telescope.finders").new_table({
+                        results = file_paths,
+                }),
+                previewer = conf.file_previewer({}),
+                sorter = conf.generic_sorter({}),
+        }):find()
+end
+
+map("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Adds a buffer to the harpoon list" })
+map("n", "<leader>hl", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Toggles the harpoon list" })
+
+map("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Opens the first item in the harpoon list" })
+map("n", "<leader>h2", function() harpoon:list():select(2) end, { desc = "Opens the 2nd item in the harpoon list" })
+map("n", "<leader>h3", function() harpoon:list():select(2) end, { desc = "Opens the 3rd item in the harpoon list" })
+map("n", "<leader>h4", function() harpoon:list():select(4) end, { desc = "Opens the 4th item in the harpoon list" })
+map("n", "<leader>h5", function() harpoon:list():select(5) end, { desc = "Opens the 5th item in the harpoon list" })
+
+map("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Navigates to the previous buffer in the harpoon list" })
+map("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Navigates to the next buffer in the harpoon list" })
+Key mappings
 ```
 
 <a id="neo-tree"></a>
@@ -1006,7 +1039,6 @@ require("configs.nvim-colorizer")
 
 <a id="git-integration"></a>
 ### Git Integration
-- [`gitsigns`](#gitsigns)
 
 
 <a id="gitsigns"></a>
