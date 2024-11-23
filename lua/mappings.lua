@@ -49,16 +49,12 @@ map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Opens a 
 -- telescope
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<CR>", { desc = "Find files"})
-map("n", "<leader>fg", builtin.live_grep, { desc = "File using grep" })
+map("n", "<leader>fg", builtin.live_grep, { desc = "Find using grep" })
 map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
 map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 
 -- peek
 map("n", "<leader>md", "<cmd>PeekOpen<CR>", { desc = "Open markdown document in browser" })
-
--- todo-comments
-map("n", "<leader>tn", "<cmd>TodoCommentsNext<CR>", { desc = "Jumps to the next TODO comment" })
-map("n", "<leader>tp", "<cmd>TodoCommentsPrev<CR>", { desc = "Jumps to the previous TODO comment" })
 
 -- follow-md-links
 map("n", "<bs>", ":edit #<CR>", { silent = true })

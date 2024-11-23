@@ -26,7 +26,7 @@ after/
 lua/
     configs/
     plugins/
-    filtypes.lua
+    filetypes.lua
     mappings.lua
     settings.lua
 init.lua
@@ -64,10 +64,10 @@ opt.relativenumber = true
 opt.list = true
 opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 
-opt.wrap = false --wordwrap false
+opt.wrap = false -- wordwrap false
 opt.tabstop = 4 -- indentation
 opt.filetype = on -- ftplugin files
-opt.scrolloff = 999 -- center cursor in large files
+opt.scrolloff = 999 -- center cursor in large files when moving vertically
 ```
 
 <a id="mappings"></a>
@@ -109,7 +109,7 @@ map("n", "<leader>T?", "<cmd>h tabnew<CR>", { desc = "Opens the tab help page" }
 
 <a id="plugins"></a>
 ## Plugins
-Here is the list of plugins that I am using.
+Here is the list of plugins that I am using. (You should buy land and grow an orchard)
 
 <a id="package-management"></a>
 ### Package Management
@@ -301,13 +301,17 @@ require("configs.lsp-config")
 #### ftconfig
 This lets me have different settings for neovim depending on file type.
 ```
-!mkdir ~/.config/nvim/ftconfig
+!mkdir ~/.config/nvim/after/ftconfig
 ```
 
-> *~/.config/nvim/ftconfig/lua.lua
+> *~/.config/nvim/after/ftconfig/py.vim
 ```
-
+set tabstop=4 -- Number of spaces that a <Tab> in the file counts for
+set shiftwidth=2 -- Number of spaces to use for each step of (auto)indent
+set softtabstop=4 -- Number of spaces that a <Tab> counts for while performing editing operations
+set expandtab -- In Insert mode use the appropriate number of spaces to insert a <Tab>
 ```
+This will make sure that all python files use the correct white space while you're programming.
 
 ---
 
@@ -377,6 +381,7 @@ Here are some plugins that help out with indentation.
 
 <a id="hlchunk"></a>
 #### [`hlchunk`](https://github.com/shellRaining/hlchunk.nvim?tab=readme-ov-file)
+This plugin will highlight indented chunks of code.
 > *~/.config/nvim/lua/plugins/hlchunk.lua*
 ```
 return {
@@ -391,10 +396,29 @@ return {
 > *~/.config/nvim/lua/configs/hlchunk.lua*
 ```
 require("hlchunk").setup {
-    chunk = { enable = true },
-    indent = { enable = true },
-    line_num = { enable = true },
-    blank = { enable = true }
+    chunk = {
+        enable = false,
+        chars = {
+            horizontal_line = "─",
+            vertical_line = "│",
+            left_top = "╭",
+                   left_bottom = "╰",
+                   right_arrow = ">",
+        },
+        style = "#806d9c",
+    },
+    indent = {
+        enable = true,
+        chars = { "│" },
+        style = { vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("Whitespace")), "fg", "gui"), "" },
+    },
+    blank = {
+        enable = true,
+        chars = { "·" },
+        style = {
+            { vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("whitespace")), "fg", "gui"), "" },
+        },
+    },
 }
 ```
 
@@ -446,7 +470,7 @@ Here are some plugins to help with various utilitarian tasks.
 
 <a id="automkdir"></a>
 #### [`automkdir`](https://github.com/mateuszwieloch/automkdir.nvim)
-Automatically creates parent directories when creating new files.
+Automatically creates parent directories when creating new files and directories.
 > *~/.config/nvim/lua/plugins/automkdir.lua*
 ```
 return { "mateuszwieloch/automkdir.nvim" }
@@ -494,12 +518,7 @@ return {
 > *~/.config/nvim/lua/configs/nvim-ufo.lua*
 ```
 require("ufo").setup {}
-```
 
-And the keymaps
-> *~/.config/nvim/lua/mappings.lua*
-```
-...
 map("n", "zR", require("ufo").openAllFolds, { desc = "Opens all folds" })
 map("n", "zM", require("ufo").closeAllFolds, { desc = "Closes all folds" })
 map("n", "zr", require("ufo").openFoldsExceptKinds, { desc = "Opens folds except kind" })
@@ -685,7 +704,6 @@ map("n", "<leader>h5", function() harpoon:list():select(5) end, { desc = "Opens 
 
 map("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Navigates to the previous buffer in the harpoon list" })
 map("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Navigates to the next buffer in the harpoon list" })
-Key mappings
 ```
 
 <a id="neo-tree"></a>
@@ -932,16 +950,12 @@ return {
 
 > *~/.config/nvim/lua/configs/todo-comments.lua*
 ```
-require("todo-comments").setup{}
-```
+local map = vim.key.map
+require("todo-comments").setup({})
 
- *~/.config/nvim/lua/mappings.lua*
+map("n", "<leader>tn", require("todo_comments").find_next(), { desc = "Jumps to the next TODO comment" })
+map("n", "<leader>tp", require("todo_comments").find_prev(), { desc = "Jumps to the previous TODO comment" })
 ```
-...
-map("n", "<leader>tn", "<cmd>TodoCommentsNext<CR>", { desc = "Jumps to the next TODO comment" })
-map("n", "<leader>tp", "<cmd>TodoCommentsPrev<CR>", { desc = "Jumps to the previous TODO comment" })
-```
-
  > *~/.config/nvim/init.lua*
 ```
 ...
