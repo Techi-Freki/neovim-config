@@ -1,6 +1,8 @@
 local ufo = require("ufo").setup {}
 local map = vim.keymap.set
+local o = vim.o
 
+-- mappings
 map("n", "zR", ufo.openAllFolds, { desc = "Open all folds" })
 map("n", "zM", ufo.closeAllFolds, { desc = "Closes all folds" })
 map("n", "zr", ufo.openFoldsExceptKinds, { desc = "Opens folds except kind" })

@@ -82,7 +82,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- basic functionality
-map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear the highlighted search term"})
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic Quickfix list" })
 map("n", "<leader>s", "<cmd>w<CR>", { desc = "Save file" })
 
@@ -109,36 +109,43 @@ map("n", "<leader>T?", "<cmd>h tabnew<CR>", { desc = "Opens the tab help page" }
 
 <a id="plugins"></a>
 ## Plugins
-Here is the list of plugins that I am using. (You should buy land and grow an orchard)
+Here is the list of plugins that I am using.
 
 <a id="package-management"></a>
 ### Package Management
 I'm currently using [`lazy.nvim`](https://github.com/folke/lazy.nvim) for my package manager.
 
-> *~/.config/nvim/init.lua*
-```
-require("config.lazy")
-```
-
 > *~/.config/nvim/lua/config/lazy.lua*
 ```
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", lazyrepo, lazypath })
+    local out = vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--branch=stable",
+        lazyrepo,
+        lazypath
+    })
+
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
             { out, "WarningMsg" },
             { "\nPress any key to exit..." },
         }, true, {})
+
         vim.fn.getchar()
         os.exit(1)
     end
 end
-vim.opt.rtp:prepend(lazypath)
+```
 
-require("lazy").setup("plugins")
+> *~/.config/nvim/init.lua*
+```
+require("config.lazy")
 ```
 ---
 
@@ -287,7 +294,9 @@ require("lspconfig").cssls.setup{ capabilities = capabilities }
 require("lspconfig").emmet_language_server.setup{}
 require("lspconfig").csharp_ls.setup{}
 require("lspconfig").markdown_oxide.setup{}
-require("lspconfig").vuels.setup{}
+require("lspconfig").vuels.setup(
+        { opt = { commentstring = "//", } }
+)
 ```
 
 And add the language server configuration to your init file.
@@ -513,6 +522,15 @@ return {
     "kevinhwang91/nvim-ufo",
     requires = "kevinhwang91/promise-async",
 }
+```
+
+> *~/.config/nvim/lua/settings.lua
+```
+...
+opt.foldcolumn = '1'
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
 ```
 
 > *~/.config/nvim/lua/configs/nvim-ufo.lua*

@@ -15,3 +15,9 @@ opt.wrap = false --wordwrap false
 opt.tabstop = 4 -- indentation
 opt.filetype = on -- ftplugin files
 opt.scrolloff = 999 -- center cursor in large files
+
+-- folding (ufo) options
+opt.foldcolumn = '1'
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true

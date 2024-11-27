@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- basic functionality
-map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear the highlighted search term"})
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic Quickfix list" })
 map("n", "<leader>s", "<cmd>w<CR>", { desc = "Save file" })
 
@@ -28,6 +28,21 @@ map("n", "TL", "<cmd>+tabn<CR>", { desc = "Navigates to the next tabpage" })
 map("n", "TH", "<cmd>-tabn<CR>", { desc = "Navigates to the previous tabpage" })
 map("n", "<leader>T?", "<cmd>h tabnew<CR>", { desc = "Opens the tab help page" })
 
+-- telescope
+local builtin = require("telescope.builtin")
+map("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<CR>", { desc = "Find files"})
+map("n", "<leader>fg", builtin.live_grep, { desc = "Find using grep" })
+map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
+map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
+
+-- themery
+map("n", "<leader>cs", "<cmd>Themery<CR>", { desc = "Toggles the theme picker" })
+
+-- url-open
+map("n", "<leader>ou", "<cmd>URLOpenUnderCursor<CR>", { desc = "Opens the url under the cursor" })
+map("n", "<leader>oh", "<cmd>URLOpenHighlightAll<CR>", { desc = "Highlights all url in the current buffer" })
+map("n", "<leader>oc", "<cmd>URLOpenHighlightAllClear<CR>", { desc = "Clears all highlighted urls in the current buffer" })
+
 -- buffer bindings
 map("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Cycles to the next buffer in the bufferline" })
 map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Cycles to the previous buffer in the bufferline" })
@@ -37,21 +52,11 @@ map("n", "<leader>b", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Closes the c
 
 map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggles the file explorer" })
 
--- themery
-map("n", "<leader>cs", "<cmd>Themery<CR>", { desc = "Toggles the theme picker" })
-
 -- toggleterm
 map("n", "<leader>th", "<cmd>ToggleTerm size=24 direction=horizontal<CR>", { desc = "Opens a horizontal terminal" })
 map("n", "<leader>tv", "<cmd>ToggleTerm size=64 direction=vertical<CR>", { desc = "Opens a vertical terminal" })
 map("n", "<leader>tt", "<cmd>ToggleTerm direction=tab<CR>", { desc = "Opens a tab terminal" })
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Opens a floating terminal" })
-
--- telescope
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<CR>", { desc = "Find files"})
-map("n", "<leader>fg", builtin.live_grep, { desc = "Find using grep" })
-map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
-map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 
 -- peek
 map("n", "<leader>md", "<cmd>PeekOpen<CR>", { desc = "Open markdown document in browser" })
@@ -66,11 +71,6 @@ map("n", "<leader>xs", "<cmd>Trouble symbols toggle focus=false<CR>", { desc = "
 map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus-false win.position=right<CR>", { desc = "LSP Definitions / references / ... (Trouble)" })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<CR>", { desc = "Location List (Trouble)" })
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<CR>", { desc = "Quickfix list (Trouble)" })
-
--- url-open
-map("n", "<leader>ou", "<cmd>URLOpenUnderCursor<CR>", { desc = "Opens the url under the cursor" })
-map("n", "<leader>oh", "<cmd>URLOpenHighlightAll<CR>", { desc = "Highlights all url in the current buffer" })
-map("n", "<leader>oc", "<cmd>URLOpenHighlightAllClear<CR>", { desc = "Clears all highlighted urls in the current buffer" })
 
 -- tabs-vs-spaces
 map("n", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "Convert spaces to tabs for buffer" })
