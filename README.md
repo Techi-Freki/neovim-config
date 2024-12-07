@@ -1072,7 +1072,6 @@ require("configs.nvim-colorizer")
 <a id="git-integration"></a>
 ### Git Integration
 
-
 <a id="gitsigns"></a>
 #### [`gitsigns`](https://github.com/lewis6991/gitsigns.nvim)
 > *~/.config/nvim/lua/plugins/gitsigns.lua*
@@ -1089,4 +1088,8 @@ require("gitsigns").setup {}
 ```
 ...
 require("configs.gitsigns")
+```
+Note that I tend to do my git staging, committing, merging using the cli so this is all I need. I use toggle term to open a terminal and do all my git operations there. You could use [`lazygit`](https://github.com/jesseduffield/lazygit) if you wanted to try a terminal user interface to simplify things. It is in the main arch repos.
+```
+sudo pacman -S lazygit
 ```
