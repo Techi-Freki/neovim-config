@@ -30,7 +30,7 @@ map("n", "<leader>T?", "<cmd>h tabnew<CR>", { desc = "Opens the tab help page" }
 
 -- telescope
 local builtin = require("telescope.builtin")
-map("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<CR>", { desc = "Find files"})
+map("n", "<leader>ff", builtin.find_files, { desc = "Find files"})
 map("n", "<leader>fg", builtin.live_grep, { desc = "Find using grep" })
 map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
 map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
