@@ -50,7 +50,8 @@ map("n", "<leader>b", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Closes the c
 
 -- [[ Plugin Bindings --]]
 
-map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggles the file explorer" })
+-- neotree
+map("n", "<leader>e", "<cmd>Neotree toggle reveal_force_cwd<CR>", { desc = "Toggles the file explorer" })
 
 -- toggleterm
 map("n", "<leader>th", "<cmd>ToggleTerm size=24 direction=horizontal<CR>", { desc = "Opens a horizontal terminal" })
@@ -77,3 +78,6 @@ map("n", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "
 map("v", "<leader>St", "<cmd>TabsVsSpacesConvert spaces_to_tabs<CR>", { desc = "Convert spaces to tabs for range" })
 map("n", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "Convert tabs to spaces for buffer" })
 map("v", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "Convert tabs to spaces for range" })
+
+-- splitjoin
+map("n", "<leader>,", "<cmd>MiniSplitjoin.toggle()<CR>", { desc = "Toggles splitjoin on arguments and arrays" })

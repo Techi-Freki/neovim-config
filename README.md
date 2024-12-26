@@ -473,7 +473,6 @@ Here are some plugins to help with various utilitarian tasks.
 - [neo-tree](#neo-tree)
 - [peek](#peek)
 - [nvim-emmet](#nvim-emmet)
-- [neo-tree](#neotree)
 - [tidy](#tidy)
 - [vim-loremipsum](#vim-loremipsum)
 
@@ -781,7 +780,7 @@ require("neo-tree").setup{
 > *~/.configs/nvim/lua/mappings.lua*
 ```
 ...
-map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggles the file explorer" })
+map("n", "<leader>e", "<cmd>Neotree toggle current reveal_force_cwd<CR>", { desc = "Toggles the file explorer" })
 ```
 
 > *~/.config/nvim/init.lua*
