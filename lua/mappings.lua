@@ -34,6 +34,7 @@ map("n", "<leader>ff", builtin.find_files, { desc = "Find files"})
 map("n", "<leader>fg", builtin.live_grep, { desc = "Find using grep" })
 map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
 map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
+map("n", "<leader>fo", builtin.oldfiles, { desc = "Find recently opened files" })
 
 -- themery
 map("n", "<leader>cs", "<cmd>Themery<CR>", { desc = "Toggles the theme picker" })
