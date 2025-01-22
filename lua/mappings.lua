@@ -29,12 +29,11 @@ map("n", "TH", "<cmd>-tabn<CR>", { desc = "Navigates to the previous tabpage" })
 map("n", "<leader>T?", "<cmd>h tabnew<CR>", { desc = "Opens the tab help page" })
 
 -- telescope
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files, { desc = "Find files"})
-map("n", "<leader>fg", builtin.live_grep, { desc = "Find using grep" })
-map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
-map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
-map("n", "<leader>fo", builtin.oldfiles, { desc = "Find recently opened files" })
+map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Find files" })
+map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Find file using grep" })
+map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", { desc = "Find in buffers" })
+map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", { desc = "Find help" })
+map("n", "<leader>fo", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", { desc = "Find recently opened files" })
 
 -- themery
 map("n", "<leader>cs", "<cmd>Themery<CR>", { desc = "Toggles the theme picker" })

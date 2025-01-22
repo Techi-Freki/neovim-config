@@ -165,12 +165,11 @@ Then add the mappings.
 > *~/.config/nvim/lua/mappings.lua*
 ```
 ...
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files, { desc = "Find files"})
-map("n", "<leader>fg", builtin.live_grep, { desc = "Find file using grep" })
-map("n", "<leader>fb", builtin.buffers, { desc = "Find in buffers" })
-map("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
-map("n", "<leader>fo", builtin.oldfiles, { desc = "Find recently opened files" })
+map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Find files" })
+map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Find file using grep" })
+map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", { desc = "Find in buffers" })
+map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", { desc = "Find help" })
+map("n", "<leader>fo", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", { desc = "Find recently opened files" })
 ```
 ---
 
