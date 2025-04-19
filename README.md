@@ -187,6 +187,7 @@ Now you need to install the language servers that you will be using. [Here](http
 
 - [Python](#python)
 - [TypeScript](#typescript)
+- [Deno](#deno)
 - [VUEJS](#vuejs)
 - [HTML](#html)
 - [JSON](#json)
@@ -195,6 +196,7 @@ Now you need to install the language servers that you will be using. [Here](http
 - [Markdown](#markdown)
 - [Lua](#lua)
 - [Emmet](#emmet)
+- [Yuck](#yuck)
 - [ftconfig](#ftconfig)
 
 
@@ -208,6 +210,12 @@ Now you need to install the language servers that you will be using. [Here](http
 ##### TypeScript
 ```
 # pacman -S typescript
+```
+
+<a id="deno"></a>
+##### Deno (javascript ls)
+```
+# pacman -S deno
 ```
 
 <a id="vuejs"></a>
@@ -256,6 +264,18 @@ $ yay -S markdown-oxide-git
 ##### Emmet
 ```
 $ yay -S emmet-language-server
+```
+
+<a id="yuck"></a>
+##### Yuck
+```
+$ yay -S yuckls-git
+```
+Add this file to the plugins directory for the yuck language server.
+> *~/.configs/nvim/lua/plugins/yuck-vim.lua
+
+```
+return { "elcowar/yuck.vim", }
 ```
 
 Now you need to create the config file for these langauge servers.
