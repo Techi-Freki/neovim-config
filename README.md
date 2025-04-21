@@ -275,7 +275,7 @@ Add this file to the plugins directory for the yuck language server.
 > *~/.configs/nvim/lua/plugins/yuck-vim.lua
 
 ```
-return { "elcowar/yuck.vim", }
+return { "elkowar/yuck.vim", }
 ```
 
 Now you need to create the config file for these langauge servers.
