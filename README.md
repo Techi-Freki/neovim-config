@@ -3,6 +3,7 @@ Here is my neovim configuration. This is specifically catered to my tastes as a 
 
 - [Directory Structure](#directory-structure)
 - [.vimrc](#vimrc)
+- [Fonts](#fonts)
 - [Settings](#settings)
 - [Mappings](#mappings)
 - [Plugins](#plugins)
@@ -43,6 +44,13 @@ set shiftwidth=4
 set smarttab=true
 set expandtab=true
 set softtabstop=true
+```
+
+<a id="fonts"></a>
+## Fonts
+The plugins and settings I use need to have a decent nerd font installed on your machine to appear correctly. I'm using the [nerd-fonts-noto-sans-mono](https://aur.archlinux.org/packages/nerd-fonts-noto-sans-mono) package from the Arch user reposotory.
+```
+$ yay -S nerd-fonts-noto-sans-mono
 ```
 
 <a id="settings"></a>
