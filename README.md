@@ -205,6 +205,7 @@ Now you need to install the language servers that you will be using. [Here](http
 - [Lua](#lua)
 - [Emmet](#emmet)
 - [Yuck](#yuck)
+- [Termux](#termux)
 - [ftconfig](#ftconfig)
 
 
@@ -221,7 +222,8 @@ Now you need to install the language servers that you will be using. [Here](http
 ```
 
 <a id="deno"></a>
-##### Deno (javascript ls)
+##### Deno
+For JavaScript
 ```
 # pacman -S deno
 ```
@@ -284,6 +286,13 @@ Add this file to the plugins directory for the yuck language server.
 
 ```
 return { "elkowar/yuck.vim", }
+```
+
+<a id="termux"></a>
+##### Termux
+For build.sh, PKGBUILD, ebuild
+```
+$ yay -S termux-language-server
 ```
 
 Now you need to create the config file for these langauge servers.
