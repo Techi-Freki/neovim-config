@@ -82,7 +82,7 @@ opt.scrolloff = 999 -- center cursor in large files when moving vertically
 ## Mappings
 Basic mappings I use.
 
-> *~/.config/nvim/lua/mappings.lua
+> *~/.config/nvim/lua/mappings.lua*
 ```
 local map = vim.keymap.set
 
@@ -252,6 +252,12 @@ For JavaScript
 # pacman -S vscode-css-languageserver
 ```
 
+<a id="lua"></a>
+##### Lua
+```
+# pacman -S lua-language-server
+```
+
 <a id="csharp"></a>
 ##### C#
 ```
@@ -262,12 +268,6 @@ $ yay -S csharp-ls
 ##### Markdown
 ```
 $ yay -S markdown-oxide-git
-```
-
-<a id="lua"></a>
-##### Lua
-```
-# pacman -S lua-language-server
 ```
 
 <a id="emmet"></a>
@@ -281,8 +281,10 @@ $ yay -S emmet-language-server
 ```
 $ yay -S yuckls-git
 ```
+
 Add this file to the plugins directory for the yuck language server.
-> *~/.configs/nvim/lua/plugins/yuck-vim.lua
+
+> *~/.configs/nvim/lua/plugins/yuck-vim.lua*
 
 ```
 return { "elkowar/yuck.vim", }
@@ -350,7 +352,7 @@ This lets me have different settings for neovim depending on file type.
 !mkdir ~/.config/nvim/after/ftconfig
 ```
 
-> *~/.config/nvim/after/ftconfig/py.vim
+> *~/.config/nvim/after/ftconfig/py.vim*
 ```
 set tabstop=4 -- Number of spaces that a <Tab> in the file counts for
 set shiftwidth=2 -- Number of spaces to use for each step of (auto)indent
