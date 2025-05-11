@@ -72,6 +72,11 @@ opt.relativenumber = true
 opt.list = true
 opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 
+-- cursorline and cursorcolumn
+opt.cursorline = true
+opt.cursorlineopt = "both"
+opt.cursorcolumn = true
+
 opt.wrap = false -- wordwrap false
 opt.tabstop = 4 -- indentation
 opt.filetype = on -- ftplugin files
