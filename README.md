@@ -76,6 +76,7 @@ opt.listchars = "tab:» ,lead:.,trail:.,eol:⏎"
 opt.cursorline = true
 opt.cursorlineopt = "both"
 opt.cursorcolumn = true
+opt.colorcolumn = "79" -- PEP-8
 
 opt.wrap = false -- wordwrap false
 opt.tabstop = 4 -- indentation

@@ -20,6 +20,7 @@ opt.scrolloff = 999 -- center cursor in large files
 opt.cursorline = true
 opt.cursorlineopt = "both"
 opt.cursorcolumn = true
+opt.colorcolumn = "79" -- PEP-8
 
 -- folding (ufo) options
 opt.foldcolumn = '1'
