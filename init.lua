@@ -8,6 +8,7 @@ require("configs.onedark-deep")
 
 --[[ Plugin Configs --]]
 
+require("configs.nvim-dap")
 require("configs.startup")
 require("configs.themery")
 require("configs.lualine")
