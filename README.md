@@ -290,7 +290,7 @@ $ yay -S yuckls-git
 
 Add this file to the plugins directory for the yuck language server.
 
-> *~/.configs/nvim/lua/plugins/yuck-vim.lua*
+> *~/.config/nvim/lua/plugins/yuck-vim.lua*
 
 ```
 return { "elkowar/yuck.vim", }
@@ -304,7 +304,7 @@ $ yay -S termux-language-server
 ```
 
 Now you need to create the config file for these langauge servers.
-> *~/.configs/nvim/lua/configs/lsp-config.lua*
+> *~/.config/nvim/lua/configs/lsp-config.lua*
 ```
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.foldingRange = {
@@ -822,7 +822,7 @@ require("neo-tree").setup{
 }
 ```
 
-> *~/.configs/nvim/lua/mappings.lua*
+> *~/.config/nvim/lua/mappings.lua*
 ```
 ...
 map("n", "<leader>e", "<cmd>Neotree toggle current reveal_force_cwd<CR>", { desc = "Toggles the file explorer" })
@@ -1021,7 +1021,7 @@ map("n", "<leader>tp", require("todo_comments").find_prev(), { desc = "Jumps to 
  > *~/.config/nvim/init.lua*
 ```
 ...
-require(".configs/todo-comments")
+require(".configs.todo-comments")
 ```
 
 <a id="twlight"></a>
@@ -1123,7 +1123,7 @@ require("configs.nvim-colorizer")
 return { "lewis6991/gitsigns.nvim" }
 ```
 
-> *~/.configs/nvim/lua/configs/gitsigns.lua*
+> *~/.config/nvim/lua/configs/gitsigns.lua*
 ```
 require("gitsigns").setup {}
 ```
@@ -1138,5 +1138,5 @@ require("configs.gitsigns")
 > I tend to do my git staging, committing, merging using the cli so this is all I need. I use toggle term to open a terminal and do all my git operations there. You could use [`lazygit`](https://github.com/jesseduffield/lazygit) if you wanted to try a terminal user interface to simplify things. It is in the main arch repos.
 
 ```
-sudo pacman -S lazygit
+# pacman -S lazygit
 ```

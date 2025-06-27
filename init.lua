@@ -8,7 +8,6 @@ require("configs.onedark-deep")
 
 --[[ Plugin Configs --]]
 
-require("configs.nvim-dap")
 require("configs.startup")
 require("configs.themery")
 require("configs.lualine")
@@ -24,7 +23,6 @@ require("configs.mini-hipatterns")
 require("configs.mini-completion")
 require("configs.render-markdown")
 require("configs.trouble")
-require("configs.neoproj")
 require("configs.tiny-devicons-auto-colors")
 require("configs.lsp-colors")
 require("configs.nvim-colorizer")
