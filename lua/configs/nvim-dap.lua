@@ -1,1 +1,1 @@
-require("nvim-dap").setup({})
+require("dap")
