@@ -12,7 +12,7 @@ return {
 				local dap = require("dap")
 				local dapui = require("dapui")
 				local python = require("dap-python")
-				vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, {})
-				vim.keymap.set("n", "<leader>dc", dap.continue, {})
+				vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, { desc = "Toggle a breakpoint" })
+				vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Continue debugging" })
 		end,
 }
