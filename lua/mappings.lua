@@ -81,3 +81,10 @@ map("v", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "
 
 -- splitjoin
 map("n", "<leader>,", "<cmd>MiniSplitjoin.toggle()<CR>", { desc = "Toggles splitjoin on arguments and arrays" })
+
+-- nvim-dap
+map("n", "<F5>", function() require("dap").continue() end, { desc = "Start debugging" } )
+map("n", "<F8>", function() require("dap").step_over() end, { desc = "Step over" } )
+map("n", "<F11>", function() require("dap").into() end, { desc = "Step into" } )
+map("n", "<shift><F8>", function() require("dap").step_out() end, { desc = "Step out" } )
+map("n", "<leader>dt", function() require("dap").toggle_breakpoint() end, { desc = "Toggle breakpoint" } )

@@ -12,7 +12,17 @@ return {
 				local dap = require("dap")
 				local dapui = require("dapui")
 				local python = require("dap-python")
-				vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint, {})
-				vim.keymap.set("n", "<leader>dc", dap.continue, {})
+
+				dap.listeners.before.attach.dapui_config = function()
+						dapui.open()
+				end
+
+				dap.listeners.before.launch.dapui_config = function()
+						dapui.open()
+				end
+
+				vim.api.nvim_create_user_command("DapCloseUI", function()
+						require("dapui").close()
+				end, {})
 		end,
 }
