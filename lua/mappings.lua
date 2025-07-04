@@ -88,3 +88,6 @@ map("n", "<F8>", function() require("dap").step_over() end, { desc = "Step over"
 map("n", "<F11>", function() require("dap").into() end, { desc = "Step into" } )
 map("n", "<shift><F8>", function() require("dap").step_out() end, { desc = "Step out" } )
 map("n", "<leader>dt", function() require("dap").toggle_breakpoint() end, { desc = "Toggle breakpoint" } )
+
+-- venv-selector
+map("n", "<leader>fs", "<cmd>VenvSelect<CR>", { desc = "Opens venv selector" })

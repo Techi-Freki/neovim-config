@@ -12,6 +12,7 @@ return {
 				local dap = require("dap")
 				local dapui = require("dapui")
 				local python = require("dap-python")
+				local venvSelector = require("venv-selector")
 
 				dap.listeners.before.attach.dapui_config = function()
 						dapui.open()
