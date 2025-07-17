@@ -14,16 +14,36 @@ return {
 				local python = require("dap-python")
 				local venvSelector = require("venv-selector")
 
-				dap.listeners.before.attach.dapui_config = function()
+				require("dapui").setup()
+				require("nvim-dap-virtual-text").setup({
+						commented = true,
+				})
+
+				python.setup("python")
+
+				vim.fn.sign_define("DapBreakpoint", {
+						text = "",
+						texthl = "DiagnosticSignError",
+						linehl = "",
+						numhl = "",
+				})
+
+				vim.fn.sign_define("DapBreakpointRejected", {
+						text = "",
+						texthl = "DiagnosticSignError",
+						linehl = "",
+						numhl = "",
+				})
+
+				vim.fn.sign_define("DapStopped", {
+						text = "",
+						texthl = "DiagnosticSignWarn",
+						linehl = "Visual",
+						numhl = "DiagnosticSignWarn",
+				})
+
+				dap.listeners.after.event_initialized.dapui_config = function()
 						dapui.open()
 				end
-
-				dap.listeners.before.launch.dapui_config = function()
-						dapui.open()
-				end
-
-				vim.api.nvim_create_user_command("DapCloseUI", function()
-						require("dapui").close()
-				end, {})
 		end,
 }

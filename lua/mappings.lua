@@ -83,11 +83,13 @@ map("v", "<leader>tS", "<cmd>TabsVsSpacesConvert tabs_to_spaces<CR>", { desc = "
 map("n", "<leader>,", "<cmd>MiniSplitjoin.toggle()<CR>", { desc = "Toggles splitjoin on arguments and arrays" })
 
 -- nvim-dap
-map("n", "<F5>", function() require("dap").continue() end, { desc = "Start debugging" } )
-map("n", "<F8>", function() require("dap").step_over() end, { desc = "Step over" } )
-map("n", "<F11>", function() require("dap").into() end, { desc = "Step into" } )
-map("n", "<shift><F8>", function() require("dap").step_out() end, { desc = "Step out" } )
-map("n", "<leader>dt", function() require("dap").toggle_breakpoint() end, { desc = "Toggle breakpoint" } )
+map("n", "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<cr>", { desc = "Toggles a breakpoint" })
+map("n", "<leader>dc", "<cmd>lua require('dap').continue()<cr>", { desc = "Continue debugging" })
+map("n", "<leader>do", "<cmd>lua require('dap').step_over()<cr>", { desc = "Step over code while debugging" })
+map("n", "<leader>di", "<cmd>lua require('dap').step_into()<cr>", { desc = "Step into code while debugging" })
+map("n", "<leader>dO", "<cmd>lua require('dap').step_out()<cr>", { desc = "Step out of code while debugging" })
+map("n", "<leader>dq", "<cmd>lua require('dap').terminate()<cr>", { desc = "Stop debugging" })
+map("n", "<leader>du", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggle the debugger view" })
 
 -- venv-selector
 map("n", "<leader>fs", "<cmd>VenvSelect<CR>", { desc = "Opens venv selector" })
