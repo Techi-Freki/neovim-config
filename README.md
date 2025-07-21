@@ -1,5 +1,8 @@
 # Installation Guide
-Here is my neovim configuration. This is specifically catered to my tastes as a programmer so I wouldn't use it if you're not me. I would use [`kickstart`](https://github.com/nvim-lua/kickstart.nvim) to learn how to configure neovim properly and create your own bespoke neovim experience.
+Here is my neovim configuration. This is specifically catered to my tastes as
+a programmer so I wouldn't use it if you're not me. I would use [`kickstart`]
+(https://github.com/nvim-lua/kickstart.nvim) to learn how to configure neovim
+properly and create your own bespoke neovim experience.
 
 - [Directory Structure](#directory-structure)
 - [.vimrc](#vimrc)
