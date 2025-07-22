@@ -93,3 +93,6 @@ map("n", "<leader>du", "<cmd>lua require('dapui').toggle()<cr>", { desc = "Toggl
 
 -- venv-selector
 map("n", "<leader>fs", "<cmd>VenvSelect<CR>", { desc = "Opens venv selector" })
+
+-- vim-dadbod
+map("n", "<leader>Sq", "<cmd>DBUI<cr>", { desc = "Opens the SQL editor" })
