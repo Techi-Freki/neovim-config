@@ -11,15 +11,12 @@ return {
 		config = function()
 				local dap = require("dap")
 				local dapui = require("dapui")
-				local python = require("dap-python")
 				local venvSelector = require("venv-selector")
 
 				require("dapui").setup()
 				require("nvim-dap-virtual-text").setup({
 						commented = true,
 				})
-
-				python.setup("python")
 
 				vim.fn.sign_define("DapBreakpoint", {
 						text = "",
